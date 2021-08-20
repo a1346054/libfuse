@@ -442,7 +442,7 @@ int main(int argc, char *argv[])
 	execl("/bin/sh", "/bin/sh", "-c", command, NULL);
 	fprintf(stderr, "%s: failed to execute /bin/sh: %s\n", progname,
 		strerror(errno));
-	
+
 	if (pass_fuse_fd)
 		close(fuse_fd);
 	free(command);
